@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: universal-ai-router
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: MCP_AUTH_TOKEN
+        generateValue: true
+      - key: DEFAULT_PROVIDER
+        value: openrouter
+      - key: PROVIDER_TIMEOUT_SECONDS
+        value: "90"
