@@ -2,7 +2,7 @@ services:
   - type: web
     name: universal-ai-router
     runtime: docker
-    plan: starter
+    plan: free
     healthCheckPath: /health
     envVars:
       - key: MCP_AUTH_TOKEN
